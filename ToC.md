@@ -1,5 +1,10 @@
+---
+title: 企業生成式 AI 轉型全書
+version: v1.0.0
+status: Stable
+last_updated: 2026-01-19
+---
 # 企業生成式 AI 轉型全書：從知識底座到自主代理人的實踐路徑
-(Enterprise GenAI Transformation: From Knowledge Foundations to Autonomous Agents)
 
 ## 第 1 章 戰略為何而戰：GenAI 與 Agentic AI 的商業本質
 - **1.1 競爭範式移轉**：從「提升效率」到「重構邊際成本」，分析智力勞動成本趨零的衝擊。
