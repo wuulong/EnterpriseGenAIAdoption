@@ -26,6 +26,8 @@
 - `VERSION.md`: 版本演進歷史
 - `cases/`: 各產業實戰用例分析
 
+## 哈爸相關文章
+- [series:企業AI轉型全書](https://wuulong.github.io/wuulong-notes-blog/series/%E4%BC%81%E6%A5%ADai%E8%BD%89%E5%9E%8B%E5%85%A8%E6%9B%B8/)
 ## 📄 版權與聲明
 
 本內容由 **哈爸 (wuulong)** 領銜創作，並透過 **Antigravity (Google DeepMind)** 的人機協作模式進行精煉與優化。
