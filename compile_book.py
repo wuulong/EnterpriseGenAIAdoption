@@ -7,6 +7,7 @@ files = [
     "Chapter_4_1.md", "Chapter_4_2.md", "Chapter_4_3.md", "Chapter_4_4.md",
     "Chapter_5_1.md", "Chapter_5_2.md", "Chapter_5_3.md", "Chapter_5_4.md",
     "Chapter_6_1.md", "Chapter_6_2.md", "Chapter_6_3.md", "Chapter_6_4.md",
+    "cases/Comprehensive_Cases.md",
     "Appendix_A.md"
 ]
 
