@@ -1,3 +1,9 @@
+---
+id: V-CASE-001
+name: 龍誠精密
+methodology_version: v1.1.0
+status: Heritage (Awaiting v1.2.0 patch)
+---
 # 🏢 虛擬案例：龍誠精密工業 (Long-Cheng Precision)
 **診斷編號**：V-CASE-001
 
