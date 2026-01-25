@@ -31,6 +31,7 @@
 ## 第二階段：預計提煉的初始資產 (Initial Assets & Samples)
 
 ### 2.1 初始戰術樣本 (T-Patterns)
+- [x] **T-5.2-Personal-Assistant-Sandbox**: 個人助理工作目錄與長期虛擬化習慣。
 - [ ] **T-2.1-Experience-Assetization**: 職人經驗 Markdown 化 Prompt 模式。
 - [ ] **T-3.3-MAS-Protocol**: 多代理人通訊與校驗協定實務。
 - [ ] **T-2.2-Evidence-Retrieval**: 高合規場景下的 RAG 強化技術。
