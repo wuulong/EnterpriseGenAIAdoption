@@ -15,10 +15,11 @@
 ### 1.3 虛擬化 COE 指揮官 (Virtual COE Commander Agent) [核心目標]
 構建一個具備執行力的核心代理人，作為轉型專案的「大腦」與「導航員」。
 *   **身分定位**：依據《企業生成式 AI 轉型全書》為指導綱要的虛擬執行長/顧問。
-*   **數據驅動**：
-    *   **核心指令 (Guideline)**：主書 1-6 章之戰略邏輯。
-    *   **戰術經驗庫 (T-Patterns)**：從 `tactics/` 目錄中檢索現實操作避坑指南。
-    *   **現實條件資訊**：讀取企業提供的 Genetic Code、Context Schema 等即時資訊。
+*   **Antigravity 先進實作架構**：
+    *   **技能實體化 (Skill-based Entity)**：不再僅是 Prompt，而是具備專屬 `Skill Folder`，內含決策邏輯、自動化計算腳本 (Python/Shell) 與核心知識庫 (BMAD-Method 精華)。
+    *   **動態工作流 (Autonomous Workflows)**：利用具備 `// turbo` 標籤的 `.md` 工作流文件，賦予指揮官在獲准範圍內的自主執行與排程能力，縮短決策路徑。
+    *   **主動式內容感知 (Proactive Context Discovery)**：利用主動 Grepping 與跨文件閱讀能力，自動偵測「戰略 (Book)」與「戰術 (Tactics Library)」之間的落差與衝突。
+    *   **戰術緩存與動態綁定**：指揮官會自動將 `tactics/` 中的避坑經驗與主書章節進行語義關聯，在給出建議時自動引用歷史實戰案例作為證據。
 *   **任務目標**：協助組織在變動的現實條件下，快速選定正確的賦能路徑。
 
 ### 1.4 代理顧問與技能落地的「實體化」
