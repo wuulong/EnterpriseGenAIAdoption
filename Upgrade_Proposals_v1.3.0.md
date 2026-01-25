@@ -12,6 +12,11 @@
 *   **戰術模板 (T-Pattern)**：包含 Context, Pattern, Artifacts, Failures, Reference。
 *   **目標**：累積足夠厚度的戰術資產，作為未來「虛擬化」的燃料。
 
+### 1.2.1 初始戰術樣本 (T-Patterns)
+- [x] **T-5.2-Personal-Assistant-Sandbox**: 個人助理工作目錄與長期虛擬化習慣。
+- [x] **T-2.1-Enterprise-Context-Bundle**: 企業背景組合包與業務起跑點。
+- [ ] **T-2.1-Experience-Assetization**: 職人經驗 Markdown 化 Prompt 模式。
+
 ### 1.3 個人助理沙盒 (Personal Assistant Sandbox) - 長期虛擬化打底
 *   **推動全員 PA 化**：每個人應習慣建立一個「雜項助理目錄」(如本專案的習慣)。
 *   **數位身分生長**：透過在目錄中長期的 Agentic 對話，讓個人的決策邏輯、背景知識被 AI 吸收，這是在真實虛擬化前的「微型演練」。
