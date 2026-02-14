@@ -2,6 +2,8 @@
 
 本專案致力於建立一套系統化的企業生成式 AI 轉型方法論，從戰略佈局、知識工程到 Agentic AI 的落地實踐，提供完整的理論框架與實戰指南。
 
+![EnterpriseGenAIAdoption_title.png](EnterpriseGenAIAdoption_title.png)
+
 ## 📖 核心內容 (Core Content)
 
 本專案包含以下核心組件：
@@ -22,13 +24,17 @@
 
 ## 📂 目錄結構 (Directory Structure)
 
-- `ToC.md`: 全書目錄
-- `Comprehensive_Enterprise_GenAI_Transformation.md`: 全書匯整大通稿
-- `CoE_Implementation_Guide.md`: 轉型實施手冊
-- `Enterprise_Context_Schema.md`: 企業診斷工具
-- `Metrics_Encyclopedia_Guide.md`: 轉型成效指標百科
-- `VERSION.md`: 版本演進歷史
-- `cases/`: 各產業實戰用例分析
+- [`ToC.md`](ToC.md): 全書目錄
+- [`Comprehensive_Enterprise_GenAI_Transformation.md`](Comprehensive_Enterprise_GenAI_Transformation.md): 全書匯整大通稿
+- [`CoE_Implementation_Guide.md`](CoE_Implementation_Guide.md): 轉型實施手冊
+- [`Enterprise_Context_Schema.md`](Enterprise_Context_Schema.md): 企業診斷工具
+- [`Metrics_Encyclopedia_Guide.md`](Metrics_Encyclopedia_Guide.md): 轉型成效指標百科
+- [`VERSION.md`](VERSION.md): 版本演進歷史
+- [`cases/`](cases/): 各產業實戰用例分析
+
+## 後處理
+- [NotebookLM:企業AI賦能](https://notebooklm.google.com/notebook/ae7751ab-29b8-40a5-8015-3678fb48a19f)
+    - [slides by NotebookLM](https://drive.google.com/open?id=1xow0dHPR7Z3VPFQn-ZOIRwxiMmdEdDuo&usp=drive_copy)
 
 ## 哈爸相關文章
 - [series:企業AI轉型全書](https://wuulong.github.io/wuulong-notes-blog/series/%E4%BC%81%E6%A5%ADai%E8%BD%89%E5%9E%8B%E5%85%A8%E6%9B%B8/)
