@@ -1,6 +1,6 @@
-# 🚀 企業產出式 AI 轉型全書 (Enterprise GenAI Transformation)
+# 🚀 企業生成式 AI 轉型全書 (Enterprise GenAI Transformation)
 
-本專案致力於建立一套系統化的企業產出式 AI 轉型方法論，從戰略佈局、知識工程到 Agentic AI 的落地實踐，提供完整的理論框架與實戰指南。
+本專案致力於建立一套系統化的企業生成式 AI 轉型方法論，從戰略佈局、知識工程到 Agentic AI 的落地實踐，提供完整的理論框架與實戰指南。
 
 ![EnterpriseGenAIAdoption_title.png](EnterpriseGenAIAdoption_title.png)
 
@@ -8,7 +8,7 @@
 
 本專案包含以下核心組件：
 
-- **《企業產出式 AI 轉型全書》**：詳細探討 AI 對企業邊際成本、組織架構與決策程序的深層影響。
+- **《企業生成式 AI 轉型全書》**：詳細探討 AI 對企業邊際成本、組織架構與決策程序的深層影響。
 - **CoE 實施指引**：為 AI 卓越中心 (Center of Excellence) 主管提供階段性的行動清單。
 - **企業診斷 Schema**：用於評估組織 AI 整備度與識別初始用例的工具。
 - **指標百科 (Metrics Encyclopedia)**：量化轉型成效的頂層指標與建構指南。

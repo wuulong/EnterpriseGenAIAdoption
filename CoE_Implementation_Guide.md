@@ -6,7 +6,7 @@ compatible_schema_range: ["v1.1.0", "v1.9.9"]
 type: Implementation Guide
 ---
 # 🚀 企業 AI 轉型行動清單：CoE 主管實戰手冊 [v1.2.1]
-**指導準則**：以《企業產出式 AI 轉型全書》為核心基礎。
+**指導準則**：以《企業生成式 AI 轉型全書》為核心基礎。
 
 ---
 

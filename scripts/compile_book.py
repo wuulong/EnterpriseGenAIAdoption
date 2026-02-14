@@ -12,7 +12,7 @@ files = [
 ]
 
 output_file = "Comprehensive_Enterprise_GenAI_Transformation.md"
-cwd = "/Users/wuulong/github/bmad-pa/events/AIBooks/EnterpriseGenAIAdoption"
+cwd = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 with open(os.path.join(cwd, output_file), "w", encoding="utf-8") as outfile:
     for i, filename in enumerate(files):
