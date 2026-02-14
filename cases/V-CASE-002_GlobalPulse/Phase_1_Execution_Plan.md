@@ -13,7 +13,7 @@
 
 ### 2. 品牌知識資產化 (Week 2)
 - [ ] 整合品牌手冊、歷史高點擊文案為 Markdown 資產。
-- [ ] 獲取創意總監同意，建立首批「人工金標數據 (Golden Dataset)」供 AI 學習。
+- [ ] 獲取創意總監同意，建立首批「人工金標資料 (Golden Dataset)」供 AI 學習。
 
 ### 3. 敏捷 CoE 成立 (Week 3)
 - [ ] 跨部門會議：定義 Agentic Factory 的工作權責。
