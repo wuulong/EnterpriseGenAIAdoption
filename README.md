@@ -46,7 +46,7 @@
 - [`cases/`](cases/): 各產業實戰用例分析
 
 ## 後處理
-- [NotebookLM:企業AI賦能](https://notebooklm.google.com/notebook/ae7751ab-29b8-40a5-8015-3678fb48a19f)
+- [NotebookLM:企業AI賦能](https://notebooklm.google.com/notebook/c75439d2-dc80-4bb0-bbab-328b76cae0b4)
     - [slides by NotebookLM](https://drive.google.com/open?id=1xow0dHPR7Z3VPFQn-ZOIRwxiMmdEdDuo&usp=drive_copy)
 
 ## 哈爸相關文章
