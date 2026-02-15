@@ -47,7 +47,9 @@
 
 ## 後處理
 - [NotebookLM:企業AI賦能](https://notebooklm.google.com/notebook/c75439d2-dc80-4bb0-bbab-328b76cae0b4)
-    - [slides by NotebookLM](https://drive.google.com/open?id=1xow0dHPR7Z3VPFQn-ZOIRwxiMmdEdDuo&usp=drive_copy)
+    - [V1.2 slides by NotebookLM](https://drive.google.com/open?id=1xow0dHPR7Z3VPFQn-ZOIRwxiMmdEdDuo&usp=drive_copy)
+    - [V1.3 slides by NotebookLM](https://drive.google.com/open?id=1lBKdwxSN6jrb2nQ0NhEAPJHth5MsOS7i&usp=drive_copy)
+
 
 ## 哈爸相關文章
 - [series:企業AI轉型全書](https://wuulong.github.io/wuulong-notes-blog/series/%E4%BC%81%E6%A5%ADai%E8%BD%89%E5%9E%8B%E5%85%A8%E6%9B%B8/)
