@@ -3,7 +3,7 @@
 ## 0. 個人賦能基礎指標 (Personal Empowerment - The Foundation)
 
 ### PE.01 工具點火率 (Ignition Rate)
-*   **定義**：個人在日常流程中，「主動」喚起 AI 工具處理任務的頻率。
+*   **定義**：個人在日常程序中，「主動」喚起 AI 工具處理任務的頻率。
 *   **意義**：衡量「物理慣性」是否建立。若無點火，則無脈絡產生。
 
 ### PE.02 資料定錨率 (Data Anchoring Ratio)

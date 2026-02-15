@@ -14,21 +14,34 @@
 - **指標百科 (Metrics Encyclopedia)**：量化轉型成效的頂層指標與建構指南。
 - **實戰案例研究**：包含製造業 (龍誠精密)、醫療業 (星辰康復) 與電商業 (全球脈動) 的深度演練。
 
-## 🛠️ 方法論特色 (Methodology Highlights) [v1.2.1]
+## 🛠️ 方法論特色 (Methodology Highlights) [v1.3.0]
 
-- **二維轉型矩陣 (2D Matrix)**：透過「合規 vs 創意」與「遺產 vs 原生資料」動態定位企業坐標。
-- **五大遺傳密碼 (Genetic Code)**：針對風險重力、資料商、任務同質性、決策敏捷度與先行者密度進行精準診斷。
-- **評測先行 (Evaluation-First)**：以測試題定義需求，確保開發過程不隨模型演進而歸零。
-- **有機賦能 OS (Organic Empowerment)**：透過 Wing Group 與五星特質先行者，實現去中心化的 AI 落地應用。
-- **成效顯性化 (Effectiveness Metrics)**：建立由 CEO 儀表板驅動的轉型成效量化指標。
+- **三明治轉型軌道 (Sandwich Transformation)**：結合頂層治理 (CoE) 與底層賦能 (Personal Sandbox)，透過 Wing Group 進行戰術轉化。
+- **L0-L4 層次化賦能架構**：將企業脈絡拆解為型態、產業、職能、實體與個人五層，實現脈絡的精準封裝與遺傳。
+- **羅盤與載體對合 (Compass & Vessel)**：將二維矩陣戰略 (羅盤) 自動映射至 L0-L4 實體配置 (載體)。
+- **脈絡堆疊協議 (Context Stacking)**：實作 `Session_Manifest.yaml`，支援 Filter (底線攔截) 與 Overlay (風格疊加) 邏輯。
+- **指標百科 (PE/ET/DA/OM)**：規格化追蹤個人賦能、演化轉化、職能位移與技術運維成效。
+
+## 📌 版本與相容性 (Version & Compatibility)
+
+| 組件類型 | 當前版本 | 相容方法論版本 | 說明 |
+| :--- | :--- | :--- | :--- |
+| **全書章節 / ToC** | v1.3.0 | v1.3.x | 包含 L0-L4 與三明治模型理論 |
+| **導航檔案 (Guides/Schema)** | v1.3.0 | v1.3.x | 具備 Manifest 協議與規格化指標 |
+| **載體範本 (Frameworks)** | v1.0.0 | v1.3.x+ | 實體化的 Lx 脈絡檔案 (Markdown) |
+| **戰術庫 (Tactics)** | v1.0.0 | v1.3.x+ | 封裝 T-Pattern 實戰案例 |
 
 ## 📂 目錄結構 (Directory Structure)
 
 - [`ToC.md`](ToC.md): 全書目錄
-- [`Comprehensive_Enterprise_GenAI_Transformation.md`](Comprehensive_Enterprise_GenAI_Transformation.md): 全書匯整大通稿
+- [`Comprehensive_Enterprise_GenAI_Transformation.md`](Comprehensive_Enterprise_GenAI_Transformation.md): 全書完整匯整檔
+- [`LINGUISTIC_STAGING.md`](LINGUISTIC_STAGING.md): 台灣語感校準暫存區 (報修區)
 - [`CoE_Implementation_Guide.md`](CoE_Implementation_Guide.md): 轉型實施手冊
 - [`Enterprise_Context_Schema.md`](Enterprise_Context_Schema.md): 企業診斷工具
 - [`Metrics_Encyclopedia_Guide.md`](Metrics_Encyclopedia_Guide.md): 轉型成效指標百科
+- [`frameworks/`](frameworks/): 實體化的 Lx 脈絡載體 (L0-L3)
+- [`sandbox/`](sandbox/): 個人主權脈絡區 (L4)
+- [`tactics/`](tactics/): 戰術轉化庫 (T-Patterns)
 - [`VERSION.md`](VERSION.md): 版本演進歷史
 - [`cases/`](cases/): 各產業實戰用例分析
 

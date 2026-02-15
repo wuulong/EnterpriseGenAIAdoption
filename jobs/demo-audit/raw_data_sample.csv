@@ -1,0 +1,8 @@
+Date,OR_Room,Patient_Name,Item_ID,Item_Name,Quantity_Used,Quantity_Invoiced,Auditor_Notes
+2026-02-01,OR-B2,王小明,MISC-001,麻醉誘導包,1,1,
+2026-02-01,OR-B2,王小明,DRUG-99,止痛針劑,2,2,
+2026-02-10,OR-B2,李大華,MISC-001,麻醉誘導包,1,1,
+2026-02-15,OR-B2,張美玲,DRUG-99,止痛針劑,5,10,疑似輸入錯誤
+2026-02-15,OR-B2,張美玲,MISC-005,特殊止血棉,1,1,
+2026-02-20,OR-B2,趙子強,DRUG-99,止痛針劑,1,1,
+2026-02-28,OR-B2,林志豪,DRUG-99,止痛針劑,20,40,季末盤點調整？

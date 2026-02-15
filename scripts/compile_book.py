@@ -1,7 +1,7 @@
 import os
 
 files = [
-    "ToC.md", "Chapter_1_1.md", "Chapter_1_2.md", "Chapter_1_3.md", "Chapter_1_4.md", "Chapter_1_5.md",
+    "ToC.md", "Chapter_1_1.md", "Chapter_1_2.md", "Chapter_1_3.md", "Chapter_1_4.md", "Chapter_1_5.md", "Chapter_1_6.md",
     "Chapter_2_1.md", "Chapter_2_2.md", "Chapter_2_3.md", "Chapter_2_4.md",
     "Chapter_3_1.md", "Chapter_3_2.md", "Chapter_3_3.md", "Chapter_3_4.md",
     "Chapter_4_1.md", "Chapter_4_2.md", "Chapter_4_3.md", "Chapter_4_4.md",

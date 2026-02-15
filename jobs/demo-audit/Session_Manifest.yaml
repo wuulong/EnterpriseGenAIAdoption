@@ -1,0 +1,23 @@
+session_id: "JOB-20260215-MEDICAL-AUDIT-001"
+timestamp: "2026-02-15T07:45:00"
+
+# 載體掛載對合 (Vessel Mapping)
+# 定義本次任務調用的 L0-L4 實體檔案
+layers:
+  L0_Workstyle: "frameworks/L0_Base_Async_Task.md"
+  L1_Domain: "frameworks/L1_Domain_Medical_Compliance.md"
+  L2_Function: "frameworks/L2_Func_Audit_T_Pattern.md"
+  L3_Entity: "frameworks/L3_Entity_StarHospital.md"
+  L4_Sovereignty: "sandbox/L4_User_ChiefAuditor_Vibe.md"
+
+# 羅盤參數對合 (Compass Logic)
+# 根據本任務「高合規、高專業」的特性設定權重開關
+stacking_logic:
+  priority: "L4 > L3 > L2 > L1 > L0"
+  constraints:
+    L1_Hard_Filter: true        # 啟動醫療法規硬攔截
+    L4_Overlay_Style: true       # 允許陳大文的職人語氣覆蓋正式公文
+    Context_Pass_through: true   # 允許 L4 訊息穿透 L3 限制（在沒違規前提下）
+
+# 任務目標 (Task Goal)
+goal: "掃描 2026 Q1 手術室耗材申報資料，產出陳大文風格的異常分析報告，並攔截任何可能洩漏 PII 的資訊。"

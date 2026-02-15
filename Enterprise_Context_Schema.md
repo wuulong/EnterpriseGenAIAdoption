@@ -5,7 +5,7 @@ compatible_book_range: ["v1.3.x"]
 type: Diagnostic Schema
 ---
 # 📋 企業 AI 轉型先行診斷書 (Enterprise Context Schema) [v1.3.0]
-**診斷邏輯**：採「感官偵測 (五大維度) -> 實體封裝 (L0-L4)」之對應流程。
+**診斷邏輯**：採「感官偵測 (五大維度) -> 實體封裝 (L0-L4)」之對應程序。
 
 ---
 
@@ -46,20 +46,20 @@ type: Diagnostic Schema
 
 ### L4: 個人特質層 (Sovereignty)
 *   **主權意識**：員工是否渴望奪回被重複勞動佔據的時間？
-*   **數位分身 (Decision History) 整備**：是否具備能代表個人決策風格的歷史對話/文件？
+*   **數位分身 (Decision History) 整備**：是否具備能代表個人決策風格的歷史對話/檔案？
 
 ---
 
 ## 三、 組織對合度 (Synthesis Alignment)
 *   **三明治轉型熱度**：
-    *   Top-down 推力 (CoE 支持度): [1-10]
+    *   Top-down 推力 (CoE 支援度): [1-10]
     *   Bottom-up 拉力 (先行者熱情): [1-10]
 *   **首戰案例 (Pilot) 選擇**：應選擇 L4/L2 整合度最高的場景切入。
 
 ---
 
 ## 四、 技術對合協議 (Technical Protocol): Session Manifest Spec
-[v1.3.0 實體化關鍵] 當診斷完成後，應根據具體任務生成「羅盤對合」後的掛載協議：
+[v1.3.0 實體化關鍵] 當診斷完成後，應根據具體任務產出「羅盤對合」後的掛載協議：
 
 ```yaml
 session_id: "UID_SESSION_GENERIC"
@@ -84,4 +84,4 @@ stacking_logic:
 ## ✅ 診斷結論與映射建議
 *   **建議定位**：(參考 2D 矩陣座標)
 *   **脈絡載體掛載序位**：(優先處理層級，如：L1-First 或 L4-First)
-*   **Manifest 生成狀態**：[ ] 未生成 [ ] 已產出範本 [ ] 已動態聯集
+*   **Manifest 產出狀態**：[ ] 未產出 [ ] 已產出範本 [ ] 已動態聯集
