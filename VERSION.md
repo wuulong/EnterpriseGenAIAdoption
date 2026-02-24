@@ -4,6 +4,26 @@
 
 ---
 
+## [v1.4.0] - 2026-02-24
+### 🌟 團隊協作對合與虛擬企業原型 (Team-Centric Sync & Virtual Enterprise Prototype)
+本次升級實現了從「個人 AI 賦能」邁向「團隊協作原型」的物理對接，正式發布全書「第 0 章」作為轉型的實踐起點。
+
+#### 1. 新增「第 0 章：虛擬企業實踐原型」 (Methodology as Prototype)
+- **演化路徑 (0.1)**：論述企業賦能的碎形邏輯，確立「個人為基，團隊為原型」的層進路徑。
+- **協作格律 (0.2)**：定義團隊手冊 (Handbook) 與工具指引 (Tools Guide) 作為團隊對合的數位憲法。
+- **目錄設計 (0.3)**：發布「管理 Repo 物理架構」，實現執行、共識、資產與成員空間的功能隔離。
+- **數位幕僚長 SyncHub (0.4)**：定義基於 Git 事件驅動與 Discord 互動的 AI 幕僚長規格，實現智慧接棒與脈絡同步。
+- **接入協議 (0.5)**：詳述個人 AI 賦能沙盒如何透過 `inbound/` 與 `outbound/` 緩衝區轉入團隊對合流。
+
+#### 2. 實踐範本實體化 (Template Assetization)
+- **遷移核心範本**：將 `TEAM_HANDBOOK_TEMPLATE`、`TEAM_TOOLS_GUIDE` 與 `MEMBER_WORKSPACE_TEMPLATE` 移至 `templates/` 目錄，提供「開箱即用」的資產。
+- **同步更新 README**：重構專案與發布區 README，導航讀者直接進入 v1.4.0 的團隊賦能特色。
+
+#### 3. 語感校準腳本升級 (Linguistic Engine v2.0)
+- **引擎最佳化**：腳本 `align_taiwanese_linguistics.py` 升級為單次正則掃描模式，支援長詞優先匹配。
+- **專案字典擴充**：針對企業開發場景新增 `硬核 -> 紮實`、`收官 -> 完工` 等在地化詞彙。
+- **全量深度校準**：完成 v1.4.0 系列書稿與範本的 100% 台灣語法對齊。
+
 ## [v1.3.0] - 2026-02-15
 ### 🌟 分形賦能與三明治軌道 (Layered Fractal Empowerment & Sandwich Transformation)
 本次升級是從「理論診斷」邁向「物理實體化」的關鍵里程碑，確立了個人與企業、羅盤與載體之間的對合協議。
