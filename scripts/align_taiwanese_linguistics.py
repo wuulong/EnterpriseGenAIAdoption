@@ -39,6 +39,7 @@ LINGUISTIC_MAPPING = {
     "程序": "程序", # 保留程序
     "硬核": "紮實",
     "收官": "完工",
+    "分形": "層次化遞迴",
 }
 
 def align_content(content):

@@ -21,11 +21,11 @@
 
 #### 3. 語感校準腳本升級 (Linguistic Engine v2.0)
 - **引擎最佳化**：腳本 `align_taiwanese_linguistics.py` 升級為單次正則掃描模式，支援長詞優先匹配。
-- **專案字典擴充**：針對企業開發場景新增 `硬核 -> 紮實`、`收官 -> 完工` 等在地化詞彙。
+- **專案字典擴充**：針對企業開發場景新增 `紮實 -> 紮實`、`完工 -> 完工` 等在地化詞彙。
 - **全量深度校準**：完成 v1.4.0 系列書稿與範本的 100% 台灣語法對齊。
 
 ## [v1.3.0] - 2026-02-15
-### 🌟 分形賦能與三明治軌道 (Layered Fractal Empowerment & Sandwich Transformation)
+### 🌟 層次化遞迴賦能與三明治軌道 (Layered Recursive Empowerment & Sandwich Transformation)
 本次升級是從「理論診斷」邁向「物理實體化」的關鍵里程碑，確立了個人與企業、羅盤與載體之間的對合協議。
 
 #### 1. 層次化賦能架構 (L0-L4 Architecture)

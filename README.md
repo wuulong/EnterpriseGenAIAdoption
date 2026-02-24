@@ -18,7 +18,7 @@
 ## 🛠️ 方法論特色 (Methodology Highlights) [v1.4.0]
 
 - **個人賦能為基 (Personal Empowerment First)**：主張企業轉型的物理起點始於「個人 AI 賦能沙盒 (Sandbox)」。唯有成員具備獨立駕馭 AI 的能力，才能轉化為團隊的實戰動能。
-- **團隊為賦能原型 (Team-as-Prototype)**：[v1.4.0] 將「個人」碎形演化至「Nano-Squad」，透過標準化協作實現從單兵到企業規模的可複製轉型路徑。
+- **團隊為賦能原型 (Team-as-Prototype)**：[v1.4.0] 將「個人」遞迴演化至「Nano-Squad」，透過標準化協作實現從單兵到企業規模的可複製轉型路徑。
 - **SyncHub 對合機制**：[v1.4.0] 基於 Git 與 Discord 的數位幕僚長規格，守護單一事實來源 (SSOT) 並實現「高頻、低摩擦」的智力接力。
 - **三明治轉型軌道 (Sandwich Transformation)**：結合頂層治理 (CoE) 與底層賦能 (Sandbox)，透過 Wing Group 進行戰術轉化。
 - **L0-L4 層次化賦能架構**：將企業脈絡拆解為型態、產業、職能、實體與個人五層，實現脈絡的精準封裝與遺傳。
