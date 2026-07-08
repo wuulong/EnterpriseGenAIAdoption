@@ -1,38 +1,49 @@
-# 3.4 高效代理人編排 (Orchestration) 與通訊格律：阻斷無效 Token 浪費
+# 3.4 企業內部 Agent 市集 (Internal Agent Marketplace) 與 Agentic Platform 的設計與實踐
 
-在 3.3 節中，我們實現了多代理人與人類的團隊協作編組。然而，當多個具備自主行動能力的 Agent 在同一個虛擬部門運行時，如果沒有明確的編排規則與通訊協定，系統極易陷入「無效對話循環」或「死鎖（Deadlock）」，在幾分鐘內耗盡數百萬 Token，卻無法產出任何實際結果。本節將探討如何物理實踐高效的代理人編排與收斂。
-
----
-
-## 3.4.1 編排模式：集中式 (Orchestration) 與分散式 (Choreography)
-
-在多代理團隊中，控制流的調度主要有兩種模式：
-
-### 1. 集中式編排 (Orchestration) ——「總指揮官」模式
-*   **機制**：由一個專屬的 **Orchestrator Agent** 控制全局。它接收任務，拆解為子任務，分派給特定的職能 Agent（如 `RD` 或 `MFG`），並在收集完所有子任務的產出後，進行最後的語意整合。
-*   **優勢**：控制流極度確定，容易設定流程邊界（Safety Guardrails），非常適合高合規與流程嚴謹的製造、財務審查場景。
-
-### 2. 分散式編排 (Choreography) ——「舞蹈協調」模式
-*   **機制**：沒有單一指揮官。每個 Agent 透過訂閱共同的事件總線（Event Bus）運行。當 `RD_L3` 座標有新專案更新時，會觸發事件，`MFG` Agent 監聽到事件後自動啟動特單比對。
-*   **優勢**：彈性高、擴展性強，適合高變動性、探索性的行銷或跨國名詞審校工作。
+當企業內部的 AI 代理人數量爆發（例如在兩個月內增長至數百個）時，組織將面臨新的混亂：重複開發、資料越權、以及員工不知道有哪些工具可用。為了解決規模化後的治理問題，在 v1.6.0 中，我們引入了 **Agentic Platform (代理人平台)** 與 **內部 Agent 市集** 的架構。
 
 ---
 
-## 3.4.2 通訊格律與防死鎖設計 (Anti-Deadlock Protocols)
+## 3.4.1 何謂 Agentic Platform (代理人平台)？
 
-為了避免 Agent 之間因為語意不清或回答過長導致的無窮對話，必須在 `TEAM_HANDBOOK` 中物理寫入以下「通訊格律」：
+**Agentic Platform** 不是一個簡單的聊天介面，而是企業中連接**「建構團隊 (Construction Team)」**與**「使用團隊 (Usage/Operations Team)」**的核心底座。它扮演著樞紐的角色：
 
-1.  **強制收斂格律 (Forced Convergence)**：
-    定義 **最大對話輪次 (Max Rounds = 3)**。Agent A 向 Agent B 請求確認，最多只能來回對答 3 次。若第 3 次仍無法取得共識，必須中斷並將系統狀態標記為 `HALT`，呼叫人類主管介入裁決。
-2.  **消息負載結構化 (Structured Payloads)**：
-    Agent 之間的通訊禁止發送無格式的冗長文字，必須使用包含 `status` (如 READY, COMPLETED, ERROR) 與 `payload` 的 JSON 格式或結構化 Markdown。這能確保接收方 Agent 能以 100% 準確的欄位讀取資料，降低 LLM 解析語意的運算負擔。
-3.  **異步非阻塞通訊 (Asynchronous Non-blocking)**：
-    當一個 Agent 調用耗時較長的 API（如 3D 轉 2D 圖面爆炸圖生成）時，必須將任務發送至後台，並將狀態標為 `PENDING`，釋放控制流，防止其他 Agent 處於無效等待（Busy-waiting）狀態，引發整個部門的協作死鎖。
+*   **建構端 (The Builders)**：由 **AI 種子尖兵** 組成，他們在平台上編寫、調試 Agent 的 System Prompt、封裝 API 工具、並進行 Skill 的版本控制與部署。
+*   **使用端 (The Users)**：由 **Agentic AI 使用者** 與 **App 使用者** 組成，他們在平台上調用 Agent、發起工作任務，並將執行結果反饋給建構團隊。
+*   **平台三大核心功能**：
+    1.  **安全與權限控制 (Gatekeeper)**：嚴格管控各個 Agent 可讀取的二維知識座標（如僅限 `MKT_L3`），防範越權讀取。
+    2.  **狀態與協作流監控 (Agent Monitor)**：實時記錄各個 MAS 團隊運作時的 Token 消耗、推理鏈走向、以及是否陷入死鎖。
+    3.  **API 動態映射 (Tool Registry)**：管理企業 ERP/CRM 的接口，讓 Builders 能無痛將這些接口作為「手腳」掛載給 Agent。
 
 ---
 
-## 結論
+## 3.4.2 企業內部 Agent 市集 (Internal Agent Marketplace)
 
-高效的編排與通訊格律，是多代理系統從「技術玩具」邁向「企業級生產力工具」的關鍵分水嶺。透過明確的集中式指揮與強制性的通訊格律，企業能以最低的 Token 成本，換取最高精確度的團隊協同產出。
+為了解決「工具發現率低」的痛點，企業應建立內部的 Agent 市集。市集的實踐路徑包含：
 
-在下一節 3.5 中，我們將對本章關於自主代理人的邏輯、工具、多代理協作與編排進行整體的回顧與自我測驗。
+*   **與 Skill Map (技能地圖) 動態對齊**：
+    市集不是靜態的 App Store，而是依據 **Skill Map** (見 2.2 節) 的業務節點進行分類。當財務人員有「費用稽核」的需求時，可以直接在市集上找到對應 `FIN_L2` 座標、掛載了「費用稽核 Skill」的 Agent 進行調用。
+*   **無縫的發布與訂閱流程**：
+    種子尖兵將開發好的 Agent 經過 CoE 團隊的合規審查後，一鍵發布至市集。各部門員工可以按需訂閱，並在 Discord 或平台專用 Web 介面上即時與其協作。
+*   **監控核心指標以評估健康度**：
+    市集必須提供管理儀表板，追蹤 **「Agent 活躍率 (Active Rate)」**、**「Task 任務完成率 (Completion Rate)」** 與 **「用戶反饋評分 (CSAT)」**。若某個 Agent 在市集上長期活躍度為零，說明其 Skill Map 定位偏離了真實業務痛點，CoE 主管應立即發起審計並予以調整或下架。
+
+```mermaid
+sequenceDiagram
+    participant B as AI 種子尖兵 (建構)
+    participant P as Agentic Platform (平台)
+    participant M as 內部 Agent 市集
+    participant U as 業務員工 (使用)
+    
+    B->>P: 封裝 Skill 與 Agent 提示詞
+    P->>M: 審核合規後發布至市集 (綁定 Skill Map)
+    U->>M: 搜尋並訂閱 Agent
+    U->>P: 發起任務協作 (Context 輸入)
+    P->>U: 產出結果並主動觸發 CTA
+    P->>B: 回報活躍率、Token 消耗與錯誤日誌
+```
+
+### 結論
+建立 Agentic Platform 與內部市集，是企業從「點狀試驗」走向「系統化運營」的必經之路。它提供了一個透明、安全的容器，讓 AI 種子尖兵的創意與一線員工的需求在此對合，源源不絕地演化出符合企業真相的數位員工隊伍。
+
+在下一節 3.5 中，我們將探討如何精確編排這些多代理團隊的通訊格律，防範系統陷入死鎖與 Token 浪費。
