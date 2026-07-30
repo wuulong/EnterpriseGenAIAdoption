@@ -7,7 +7,7 @@
 - **二維職能知識矩陣 (2D Knowledge Matrix)**：以 L0-L4 階層為縱軸、產銷人發財（RD/MFG/MKT/HR/FIN）為橫軸的企業智力資產地圖。
 - **座標定位系統 (Coordinate Positioning)**：以如 `RD_L3`、`MFG_L4` 等二維代號唯一標示智力資產，供 SQL 事實庫與 Agent 精確定錨與調用。
 - **RAG 與脈絡堆疊 (Context Stacking)**：依據 Agent 職能，按 `L4 > L3 > L2 > L1 > L0` 優先級由下往上動態掛載決策脈絡。
-- **三位一體 Facts SQL 定錨術**：將精密設備參數寫入去識別化的 SQLite 影子沙盒中，讓 Agent 以執行 SQL 查詢獲取絕對 Truth，杜絕數值隨機幻覺。
+- **三位一體 Facts SQL 定錨術**：將精密裝置參數寫入去識別化的 SQLite 影子沙盒中，讓 Agent 以執行 SQL 查詢獲取絕對 Truth，杜絕數值隨機幻覺。
 - **知識治理 (Knowledge Governance)**：確保 AI 在檢索與產出過程中遵守權限、隱私保護與倫理規範的管控機制。
 
 ---

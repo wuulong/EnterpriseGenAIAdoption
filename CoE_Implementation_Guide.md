@@ -5,7 +5,7 @@ compatible_book_range: ["v1.5.x"]
 type: Implementation Guide
 ---
 # 🚀 企業 AI 轉型行動清單：CoE 主管實戰手冊 [v1.5.1]
-**核心戰略**：採用「三明治轉型軌道 (Sandwich Transformation)」，運行以人機混編團隊為核心的「有機賦能作業系統 (Empowerment OS)」。
+**核心戰略**：採用「三明治轉型軌道 (Sandwich Transformation)」，運作以人機混編團隊為核心的「有機賦能作業系統 (Empowerment OS)」。
 
 ---
 
@@ -17,7 +17,7 @@ type: Implementation Guide
     - 定義橫軸五大職能邊界：發 (`RD`)、產 (`MFG`)、銷 (`MKT`)、人 (`HR`)、財 (`FIN`)。
     - 建立 **L0 (型態與資料 Type & File)**：資訊實體格式與表單 schema 規範（如 Markdown 格式、錄音去識別化格式）。
     - 建立 **L1 (產業與文明 Domain & Civilization)**：不隨單一企業改變的產業基礎事實與通用合規標準。
-    - 建立 **L2 (職能與習慣 SOP & Flow)**：企業通用的標準工作流程。
+    - 建立 **L2 (職能與習慣 SOP & Flow)**：企業通用的標準工作程序。
     - 建立 **L3 (企業與真相 Entity & Facts)**：企業獨有的物理參數與 facts 真相庫。
     - 建立 **L4 (個人與專家 Heuristics & Wisdom)**：一線老手的隱性經驗與現場手感片段。
 - [ ] **導入 Namespace 命名空間規範**：
@@ -60,7 +60,7 @@ type: Implementation Guide
 - [ ] **代理人架構 (ReAct) 部署**：啟動具備自我反思能力的 Agent 執行複雜任務。
 - [ ] **導入 Orchestrator 高效編排與通訊格律**：
     - 設定 **最大輪次 (Max Rounds)** 與 **Token 收斂機制**，防範協作流死鎖，節省執行成本。
-- [ ] **運行戰術中轉程序 (Tactics Staging Area)**：
+- [ ] **運作戰術中轉程序 (Tactics Staging Area)**：
     - **採集**：Wing Group 定期從個人 `sandbox/` 中掃描高頻、高效的個人 Pocket Skills。
     - **清潔與格律化**：去除個人個資，按照 T-Pattern 格式重新封裝。
     - **審核與對位**：CoE 審核其 L1 (合規) 與 L3 (資產) 衝突性，驗證其通向 L2 (職能) 的價值。
@@ -81,7 +81,7 @@ type: Implementation Guide
 *   **[ ] 每週工具實驗 (Case Study)**：涵蓋生活與公務，維持 Wing Group 成員的工具興奮感。
 *   **[ ] 啟動「生活先行」補助計畫**：
     - 提供定額補助讓員工自選個人 AI 工具，允許生活化應用以培養工具慣性，降低心理抗性。
-*   **[ ] 運行 Empowerment OS 變革軌道**：
+*   **[ ] 運作 Empowerment OS 變革軌道**：
     - 定期舉辦 Demo Day 展示 Nano-Squad 與 Agent 協作成效，實現由底而上的戰術回填與座標演化。
 
 ---

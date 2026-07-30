@@ -2,7 +2,7 @@
 
 ## 1. 核心觀念回顧 (Core Key Takeaways)
 
-1. **Token 套利與兩階段解耦**：避免直接複製舊官僚流程。先外包 OSINT/Deep Research 搜集血肉，再由內建大腦進行 APQC/ISO 確定性骨架融合。
+1. **Token 套利與兩階段解耦**：避免直接複製舊官僚程序。先外包 OSINT/Deep Research 搜集血肉，再由內建大腦進行 APQC/ISO 確定性骨架融合。
 2. **L0-L4 遺傳二維座標**：以 `[DEPT]_[Lx]_[TYPE]_[NUM]` 標註資產點位，遵循 `L4 > L3 > L2 > L1 > L0` 脈絡覆蓋優先級。
 3. **Database-First 中控控制面 (`db/`)**：以關聯式 Meta DB 定錨事實，物理翻譯 APQC/ISO 條碼為極簡 IT 系統 (`SYS-xxx`) 的 SQL/API 驅動指令。
 4. **Standard 3-Tier `_workflow/` 管線**：全公司 7 大部門（含 `00_CORE`）一律實施 `Rules/` (剛性防線)、`Triggers/` (事件綁定)、`Workflows/` (步驟 YAML) 的 100% 正則對稱切法。

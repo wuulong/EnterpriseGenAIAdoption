@@ -24,7 +24,7 @@
 
 ### 派生腳本物理作業：
 1. 自動複製 `virtual-enterprise-template` 完整 L0-L4 骨架與 `_workflow/` 目錄（自動排除內層 `.git`）。
-2. 自動建置新實例專屬之 `db/control_plane.sqlite` 數據庫。
+2. 自動建置新實例專屬之 `db/control_plane.sqlite` 資料庫。
 3. 自動執行新目標目錄之獨立 `git init -b main`。
 
 ---
@@ -46,6 +46,6 @@ graph TD
     COMPARE -->|對齊度 >= 85%| CUTOVER
 ```
 
-1. **數據雙送**：將去識別化之真實個案同步抄送給真實員工與 Agent 網路。
+1. **資料雙送**：將去識別化之真實個案同步抄送給真實員工與 Agent 網路。
 2. **Gap Analysis**：比對兩者產出之差異與合規性。
 3. **85% 閥值解鎖**：當對齊度達到 85% 以上時，正式解鎖從「人機對合 (Human-in-the-loop)」切換至「例外管理 (Management by Exception)」的自動化營運。

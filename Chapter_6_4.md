@@ -13,7 +13,7 @@
     *   **職責**：定義核心方法論、撰寫相關方法論書籍、傳遞人機混編與有機賦能的概念、設計二維知識矩陣與 Skill Map 的標準。提供高價值的企業組織轉型顧問服務，協助提取與洗滌業務 SOP。
 *   **產品化與技術實踐（執行/SI 角色）**：
     *   **定位**：平台產品的「實體物理落地端」。
-    *   **職責**：將大腦設計的 Prototype 轉化為成熟、穩定的商業軟體產品。處理地端 GPU 推論硬體採購、本地推論伺服器搭建、事實 Facts 資料庫物理部署、以及自動脫敏管道的維運。
+    *   **職責**：將大腦設計的 Prototype 轉化為成熟、穩定的商業軟體產品。處理地端 GPU 推論硬體採購、本地推論伺服器搭建、事實 Facts 資料庫物理部署、以及自動去識別化管道的維運。
 
 ---
 
@@ -24,13 +24,13 @@
 1.  **Antigravity SDK 外部專家協同**：
     尋求具備 **Antigravity SDK 開發經驗的外部技術專家**（例如與經驗豐富的獨立開發者或外部軟體團隊）進行緊密合作。利用 SDK 的多代理協作、Hook 攔截機制以及語義 PR 管控，加速地端/雲端混合底座的 Prototype 迭代。
 2.  **合攻方案 (Joint Go-to-Market)**：
-    方法論大腦負責在前線教育市場、舉辦組織轉型工作坊，為企業「開好藥方」（輸出 Skill Map 與洗滌後的 SOP 規格）；SI 執行方與 Antigravity SDK 專家則負責「物理配藥與注射」（地端設備部署、SDK 平台接口對合與運維），共同服務終端企業客戶。
+    方法論大腦負責在前線教育市場、舉辦組織轉型工作坊，為企業「開好藥方」（輸出 Skill Map 與洗滌後的 SOP 規格）；SI 執行方與 Antigravity SDK 專家則負責「物理配藥與注射」（地端裝置部署、SDK 平台接口對合與運維），共同服務終端企業客戶。
 
 ```mermaid
 graph TD
-    A["1. 方法論大腦 (顧問/組織診斷/SOP 洗滌)"] -->|輸出規格與 Skill Map| B["2. SI 執行方 (硬體設備方案/地端部署)"]
-    C["3. Antigravity SDK 專家 (底層 Agent/Hook 模組合攻)"] -->|提供技術支持| B
-    B -->|交付平台| D["4. 終端企業客戶 (Agentic Platform 運行)"]
+    A["1. 方法論大腦 (顧問/組織診斷/SOP 洗滌)"] -->|輸出規格與 Skill Map| B["2. SI 執行方 (硬體裝置方案/地端部署)"]
+    C["3. Antigravity SDK 專家 (底層 Agent/Hook 模組合攻)"] -->|提供技術支援| B
+    B -->|交付平台| D["4. 終端企業客戶 (Agentic Platform 運作)"]
     style A fill:#f9f,stroke:#333,stroke-width:2px
     style B fill:#bbf,stroke:#333,stroke-width:2px
     style C fill:#ffd27f,stroke:#333,stroke-width:2px

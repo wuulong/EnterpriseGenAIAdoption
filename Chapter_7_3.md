@@ -7,13 +7,13 @@
 2. 對數值、金額門檻與日期缺乏精確查詢能力。
 3. 無法維護事務性 (ACID) 狀態。
 
-v1.7.0 方法論提出 **Database-First 中控控制面 (`db/` 目錄)**，將關聯式 SQLite/PostgreSQL 資料庫作為底層硬核控制面。
+v1.7.0 方法論提出 **Database-First 中控控制面 (`db/` 目錄)**，將關聯式 SQLite/PostgreSQL 資料庫作為底層紮實控制面。
 
 ---
 
 ## 2. Control Plane Meta DB 4 大實體資料表
 
-在虛擬企業模板中，中控 DB 置於 `db/control_plane.sqlite`，包含 4 大核心 L3 數據表：
+在虛擬企業模板中，中控 DB 置於 `db/control_plane.sqlite`，包含 4 大核心 L3 資料表：
 
 ```sql
 -- 1. 外部系統介面閘道表 (連結 SYS-xxx)
@@ -62,7 +62,7 @@ CREATE TABLE execution_audit_logs (
 為了讓對話討論與 Agent 動作具備實體掛載標的，將複雜企業 IT 簡化為二維系統代號 (`system_catalog.csv`)：
 - `SYS-CORE-DB`: 中控 Meta DB (SQLite)
 - `SYS-HR-GS`: 人事與員工資料庫 (Google Sheet)
-- `SYS-RD-GIT`: 研發代碼與 PRD 規格庫 (Git Repo)
+- `SYS-RD-GIT`: 研發程式碼與 PRD 規格庫 (Git Repo)
 - `SYS-FIN-GS`: 財務報支與請款單據庫 (Google Sheet)
 - `SYS-PROC-GS`: 採購比價與供應商庫 (Google Sheet)
 - `SYS-OPS-GS`: 營運現場與交付日誌庫 (Google Sheet)

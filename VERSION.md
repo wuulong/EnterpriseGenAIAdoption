@@ -23,15 +23,15 @@
 
 ## [v1.6.1] - 2026-07-08
 ### 🌟 Agentic Platform 平台化架構、治理工程 (Harness) 與生態合作落地 (Platformization, Harness Engineering & Ecosystem Collaboration)
-本次升級將方法論跨入實體平台產品與商業實作。實作了地端自動脫敏去識別化、執行儀表板監控、剛性限制的治理工程與 Hook 攔截機制，並確立大腦與 SI 執行專業分工及獲利模型。
+本次升級將方法論跨入實體平台產品與商業實作。實作了地端自動去識別化去識別化、執行儀表板監控、剛性限制的治理工程與 Hook 攔截機制，並確立大腦與 SI 執行專業分工及獲利模型。
 
 #### 1. Agentic AI Platform 平台架構與彈性部署
 - **通用 Skill 共享庫 (3.4)**：定義如何將口袋技能格律化上傳至平台通用共享庫，防止重複造輪子。
-- **雲地結合與自動去識別化 (4.1)**：敏感 Facts 地端留存與 Model Router，上雲前自動進行 PII 脫敏，並地端還原。
-- **Execution Dashboard 儀表板 (4.2)**：實時呈報活動中 Task 運行流、Skill 被呼叫熱度 (Skill Heatmap) 與產出結果資產。
+- **雲地結合與自動去識別化 (4.1)**：敏感 Facts 地端留存與 Model Router，上雲前自動進行 PII 去識別化，並地端還原。
+- **Execution Dashboard 儀表板 (4.2)**：實時呈報活動中 Task 運作流、Skill 被呼叫熱度 (Skill Heatmap) 與產出結果資產。
 
 #### 2. 治理工程 (Harness Engineering) 與 Hook 攔截機制
-- **治理工程與 Hook 攔截 (4.3 新增)**：藉由 before_action (高危動作與權限檢核) 與 after_action (產出品質與文件註解稽核) 的 Hook 攔截點剛性約束 Agent，以及基於 SDK 的多代理 MAS 循環修正 Loop。
+- **治理工程與 Hook 攔截 (4.3 新增)**：藉由 before_action (高危動作與權限檢核) 與 after_action (產出品質與檔案註解稽核) 的 Hook 攔截點剛性約束 Agent，以及基於 SDK 的多代理 MAS 循環修正 Loop。
 - **子章節編號順延**：完成 4.4 法律認信與 4.5 回顧自測的序號物理順延更新。
 
 #### 3. 轉型顧問、SOP 提取與三重獲利模型
@@ -42,7 +42,7 @@
 
 ## [v1.6.0] - 2026-07-08
 ### 🌟 三層人才架構、無感 Context 採集與 30步反思寫作流 (Three-Layer Talent, Frictionless Context Capture & 30-Step Reflection Flow)
-本次升級實作了無感資料收集、創意防八股的寫作反思流，以及優化轉型組織架構的三層人才體系與指標百科更新。
+本次升級實作了無感資料收集、創意防八股的寫作反思流，以及最佳化轉型組織架構的三層人才體系與指標百科更新。
 
 ---
 

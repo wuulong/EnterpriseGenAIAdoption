@@ -5,11 +5,11 @@ files = [
     "Chapter_0_1.md", "Chapter_0_2.md", "Chapter_0_3.md", "Chapter_0_4.md", "Chapter_0_5.md",
     "Chapter_1_1.md", "Chapter_1_2.md", "Chapter_1_3.md", "Chapter_1_4.md", "Chapter_1_5.md", "Chapter_1_6.md", "Chapter_1_7.md",
     "Chapter_2_1.md", "Chapter_2_2.md", "Chapter_2_3.md", "Chapter_2_4.md", "Chapter_2_5.md", "Chapter_2_6.md",
-    "Chapter_3_1.md", "Chapter_3_2.md", "Chapter_3_3.md", "Chapter_3_4.md", "Chapter_3_5.md",
-    "Chapter_4_1.md", "Chapter_4_2.md", "Chapter_4_3.md", "Chapter_4_4.md",
+    "Chapter_3_1.md", "Chapter_3_2.md", "Chapter_3_3.md", "Chapter_3_4.md", "Chapter_3_5.md", "Chapter_3_6.md",
+    "Chapter_4_1.md", "Chapter_4_2.md", "Chapter_4_3.md", "Chapter_4_4.md", "Chapter_4_5.md",
     "Chapter_5_1.md", "Chapter_5_2.md", "Chapter_5_3.md", "Chapter_5_4.md",
-    "Chapter_6_1.md", "Chapter_6_2.md", "Chapter_6_3.md", "Chapter_6_4.md",
-    "cases/Comprehensive_Cases.md",
+    "Chapter_6_1.md", "Chapter_6_2.md", "Chapter_6_3.md", "Chapter_6_4.md", "Chapter_6_5.md",
+    "Chapter_7_1.md", "Chapter_7_2.md", "Chapter_7_3.md", "Chapter_7_4.md", "Chapter_7_5.md", "Chapter_7_6.md",
     "Appendix_A.md"
 ]
 
