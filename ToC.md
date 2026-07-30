@@ -1,10 +1,10 @@
 ---
 title: 企業生成式 AI 轉型全書
-version: v1.7.0
-status: Stable (Virtual Enterprise & Dual-Track Hydration)
-last_updated: 2026-07-30
+version: v1.7.1
+status: Stable (Entity State Engine & Full Asset Auto-Scan)
+last_updated: 2026-07-31
 ---
-# 《企業生成式 AI 轉型全書：從知識底座到自主代理人的實踐路徑》 (v1.7.0)
+# 《企業生成式 AI 轉型全書：從知識底座到自主代理人的實踐路徑》 (v1.7.1)
 
 ## 第 0 章 虛擬企業實踐原型：團隊協作脈絡對合與 AI 賦能實測
 - **0.1 演化路徑**：企業賦能的碎形邏輯：個人為基，團隊為原型。
@@ -59,9 +59,9 @@ last_updated: 2026-07-30
 ## 第 7 章 虛擬企業建模與 AI 原生架構實踐 (Virtual Enterprise Architecture & Practice) [v1.7.0]
 - **7.1 虛擬企業願景**：Token 套利、兩階段職能解耦與雙軌融合 (Hydration) 方法學。 [v1.7.0]
 - **7.2 團隊級載體與二維座標體系**：L0-L4 遺傳感官與脈絡覆蓋優先級 (`L4 > L3 > L2 > L1 > L0`)。 [v1.7.0]
-- **7.3 Database-First 中控控制面 (Meta DB)**：APQC/ISO 條碼 physical 翻譯與 SQL/API 指令驅動。 [v1.7.0]
+- **7.3 Database-First 中控控制面 (Meta DB)**：APQC/ISO 條碼 physical 翻譯、**全域實態總控表 (entity_state_ledger)、8 大數字狀態碼 (10~80) 與 JSON Metadata**。 [v1.7.1]
 - **7.4 正則對稱式 3-Tier `_workflow/` 管線**：`Rules/`, `Triggers/`, `Workflows/` 與 RACI 簽核門檻控管。 [v1.7.0]
-- **7.5 通用範本 (SSOT Vessel) 派生與私有標竿實例 (OSINT Hydration)**：`instantiate_ve.py` 與影子運轉。 [v1.7.0]
+- **7.5 通用範本 (SSOT Vessel) 派生與私有標竿實例**：`instantiate_ve.py` 與 **`manage_ledger.py scan` 全資產 100% 自動掃描登錄**。 [v1.7.1]
 - **7.6 本章回顧與自測**：虛擬企業建模評估與轉型成熟度檢核。 [v1.7.0]
 
 ## 附錄 A：情境式常見問題 (Scenario-based FAQ)

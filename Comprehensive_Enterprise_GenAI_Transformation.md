@@ -1,10 +1,10 @@
 ---
 title: 企業生成式 AI 轉型全書
-version: v1.7.0
-status: Stable (Virtual Enterprise & Dual-Track Hydration)
-last_updated: 2026-07-30
+version: v1.7.1
+status: Stable (Entity State Engine & Full Asset Auto-Scan)
+last_updated: 2026-07-31
 ---
-# 《企業生成式 AI 轉型全書：從知識底座到自主代理人的實踐路徑》 (v1.7.0)
+# 《企業生成式 AI 轉型全書：從知識底座到自主代理人的實踐路徑》 (v1.7.1)
 
 ## 第 0 章 虛擬企業實踐原型：團隊協作脈絡對合與 AI 賦能實測
 - **0.1 演化路徑**：企業賦能的碎形邏輯：個人為基，團隊為原型。
@@ -59,9 +59,9 @@ last_updated: 2026-07-30
 ## 第 7 章 虛擬企業建模與 AI 原生架構實踐 (Virtual Enterprise Architecture & Practice) [v1.7.0]
 - **7.1 虛擬企業願景**：Token 套利、兩階段職能解耦與雙軌融合 (Hydration) 方法學。 [v1.7.0]
 - **7.2 團隊級載體與二維座標體系**：L0-L4 遺傳感官與脈絡覆蓋優先級 (`L4 > L3 > L2 > L1 > L0`)。 [v1.7.0]
-- **7.3 Database-First 中控控制面 (Meta DB)**：APQC/ISO 條碼 physical 翻譯與 SQL/API 指令驅動。 [v1.7.0]
+- **7.3 Database-First 中控控制面 (Meta DB)**：APQC/ISO 條碼 physical 翻譯、**全域實態總控表 (entity_state_ledger)、8 大數字狀態碼 (10~80) 與 JSON Metadata**。 [v1.7.1]
 - **7.4 正則對稱式 3-Tier `_workflow/` 管線**：`Rules/`, `Triggers/`, `Workflows/` 與 RACI 簽核門檻控管。 [v1.7.0]
-- **7.5 通用範本 (SSOT Vessel) 派生與私有標竿實例 (OSINT Hydration)**：`instantiate_ve.py` 與影子運轉。 [v1.7.0]
+- **7.5 通用範本 (SSOT Vessel) 派生與私有標竿實例**：`instantiate_ve.py` 與 **`manage_ledger.py scan` 全資產 100% 自動掃描登錄**。 [v1.7.1]
 - **7.6 本章回顧與自測**：虛擬企業建模評估與轉型成熟度檢核。 [v1.7.0]
 
 ## 附錄 A：情境式常見問題 (Scenario-based FAQ)
@@ -1933,7 +1933,7 @@ $$\text{Context Resolution} = L4 \gg L3 \gg L2 \gg L1 \gg L0$$
 
 ---
 
-# 7.3 Database-First 中控控制面 (Meta DB)：APQC/ISO 條碼 physical 翻譯與 SQL/API 指令驅動 [v1.7.0]
+# 7.3 Database-First 中控控制面 (Meta DB)：APQC/ISO 條碼 physical 翻譯、全域實態總控表與 8 大數字狀態碼 [v1.7.1]
 
 ## 1. 平面 RAG 的終結：Database-First 混合架構 (`ADR-001`)
 
@@ -1942,16 +1942,16 @@ $$\text{Context Resolution} = L4 \gg L3 \gg L2 \gg L1 \gg L0$$
 2. 對數值、金額門檻與日期缺乏精確查詢能力。
 3. 無法維護事務性 (ACID) 狀態。
 
-v1.7.0 方法論提出 **Database-First 中控控制面 (`db/` 目錄)**，將關聯式 SQLite/PostgreSQL 資料庫作為底層紮實控制面。
+v1.7.0 / v1.7.1 方法論提出 **Database-First 中控控制面 (`db/` 目錄)**，將關聯式 SQLite/PostgreSQL 資料庫作為底層紮實控制面。
 
 ---
 
-## 2. Control Plane Meta DB 4 大實體資料表
+## 2. Control Plane Meta DB 5 大實體資料表
 
-在虛擬企業模板中，中控 DB 置於 `db/control_plane.sqlite`，包含 4 大核心 L3 資料表：
+在虛擬企業模板中，中控 DB 置於 `db/control_plane.sqlite`，包含 5 大核心 L3 控制面資料表：
 
 ```sql
--- 1. 外部系統介面閘道表 (連結 SYS-xxx)
+-- 1. 外部系統介面閘道表
 CREATE TABLE external_connectors (
     connector_id VARCHAR(64) PRIMARY KEY,
     system_name VARCHAR(100) NOT NULL,
@@ -1960,12 +1960,12 @@ CREATE TABLE external_connectors (
     status VARCHAR(20) DEFAULT 'ACTIVE'
 );
 
--- 2. APQC 流程條碼 physical 翻譯表
+-- 2. APQC / ISO 流程與實體 DB 表映射 (含 L0-L4 座標標籤)
 CREATE TABLE apqc_data_mappings (
     mapping_id VARCHAR(64) PRIMARY KEY,
-    apqc_code VARCHAR(32) NOT NULL,       -- 如: APQC-7.1 (L1)
+    apqc_code VARCHAR(32) NOT NULL,
     layer_level VARCHAR(10) DEFAULT 'L2',
-    sop_id VARCHAR(64) NOT NULL,          -- 如: HR_L2_SOP_001
+    sop_id VARCHAR(64) NOT NULL,
     target_table VARCHAR(100) NOT NULL,
     target_api_action VARCHAR(100) NOT NULL
 );
@@ -1975,11 +1975,11 @@ CREATE TABLE agent_permissions (
     permission_id VARCHAR(64) PRIMARY KEY,
     agent_id VARCHAR(64) NOT NULL,
     apqc_code VARCHAR(32) NOT NULL,
-    raci_role CHAR(1) NOT NULL,            -- R, A, C, I
+    raci_role CHAR(1) NOT NULL,
     max_approval_amount DECIMAL(12,2) DEFAULT 0.00
 );
 
--- 4. 執行與稽核軌跡日誌表
+-- 4. 執行與稽核軌跡日誌
 CREATE TABLE execution_audit_logs (
     log_id VARCHAR(64) PRIMARY KEY,
     workflow_id VARCHAR(64) NOT NULL,
@@ -1988,11 +1988,41 @@ CREATE TABLE execution_audit_logs (
     human_approved BOOLEAN DEFAULT FALSE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+-- 5. 全域實體狀態總控調度表 (Entity State Engine [v1.7.1])
+CREATE TABLE entity_state_ledger (
+    item_id VARCHAR(50) PRIMARY KEY,          -- 全域唯一 ID (例: 'FNC-HR-001', 'SYS-OPS-GS', 'SOP-OPS-001')
+    item_type VARCHAR(30) NOT NULL,          -- 項目類型 ('FUNCTION', 'SYSTEM', 'DOCUMENT', 'AGENT', 'WORKFLOW', 'TASK')
+    item_name VARCHAR(100) NOT NULL,         -- 項目名稱 (例: '在宅醫師出診車輛準備 SOP')
+    prefix_code VARCHAR(30),                 -- 所屬 Prefix (例: '05_OPS')
+    apqc_id VARCHAR(30),                     -- 關聯 APQC (例: 'APQC-4.2')
+    status INTEGER NOT NULL DEFAULT 10,      -- 數字狀態碼 (10:虛擬發想 ~ 80:修訂確認)
+    memo TEXT,                               -- 人工審查備註 / 補充資訊 / 錯誤 Log
+    meta_data TEXT DEFAULT '{}',             -- 擴充 Metadata (JSON 格式, 例: {"alignment_rate": 87.5})
+    owner_agent_id VARCHAR(50),              -- 主責 Agent (例: 'AGT-OPS-001')
+    last_updated_by VARCHAR(50),             -- 最後更新者 ('HYDRATION_ENGINE', 'HUMAN_ADMIN')
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 ```
 
 ---
 
-## 3. 擬真極簡 IT 系統 (`SYS-xxx`) 與 API 驅動
+## 3. 八大生命週期數字狀態碼 (Status Integer Enum [v1.7.1])
+
+為了極大化 SQL 查詢效能（支援 `WHERE status >= 30` 或 `ORDER BY status ASC`），`status` 欄位採數字碼管理：
+
+- **`10` (虛擬發想 / VIRTUAL_IDEATION)**：初始發想與草案階段（預設初始值）。
+- **`20` (虛擬確認 / VIRTUAL_CONFIRMED)**：虛擬層面規格、SOP 或二維清單審查確認。
+- **`30` (真實對接啟動 / REAL_INTEGRATION_STARTED)**：開始接入真實企業/診所實體系統 (HIS/EMR/Sheet)。
+- **`40` (對齊進行中 / ALIGNMENT_IN_PROGRESS)**：正在進行影子模式 (Shadow Mode) 比對與人機行為對齊。
+- **`50` (已對齊 / ALIGNED)**：影子模式對齊度已達標 (>= 85%)。
+- **`60` (已確認 / CONFIRMED)**：人類主管/顧問完成最終簽核與正式上線確認。
+- **`70` (修訂中 / REVISION_IN_PROGRESS)**：正式上線資產發動重新修訂與維護。
+- **`80` (修訂確認 / REVISION_CONFIRMED)**：修訂與變更內容完成二次審查確認。
+
+---
+
+## 4. 擬真極簡 IT 系統 (`SYS-xxx`) 與 API 驅動
 
 為了讓對話討論與 Agent 動作具備實體掛載標的，將複雜企業 IT 簡化為二維系統代號 (`system_catalog.csv`)：
 - `SYS-CORE-DB`: 中控 Meta DB (SQLite)
@@ -2003,7 +2033,7 @@ CREATE TABLE execution_audit_logs (
 - `SYS-OPS-GS`: 營運現場與交付日誌庫 (Google Sheet)
 - `SYS-MKT-CRM`: 行銷與客戶關係 CRM (Google Sheet)
 
-當 SOP 提到「執行招募評估」時，`apqc_data_mappings` 自動將 `APQC-7.1` physical 翻譯為對 `SYS-HR-GS` 的 API/SQL 寫入動作，實現 100% 確定性驅動。
+當 SOP 提到「執行招募評估」時，`apqc_data_mappings` 自動將 `APQC-7.1` physical 翻譯為對 `SYS-HR-GS` 的 API/SQL 寫入動作，並於 `entity_state_ledger` 中將 `SOP-HR-001` 的狀態由 `20` (虛擬確認) 推升至 `30` (真實對接啟動) 乃至 `60` (已確認)，實現 100% 確定性驅動。
 
 
 ---
@@ -2072,7 +2102,7 @@ steps:
 
 ---
 
-# 7.5 通用範本 (SSOT Vessel) 派生與私有標竿實例 (OSINT Hydration) 影子運轉 [v1.7.0]
+# 7.5 通用範本 (SSOT Vessel) 派生與私有標竿實例 (OSINT Hydration) 影子運轉 [v1.7.1]
 
 ## 1. 範本與實例的嚴格隔離原則 (`ADR-005`)
 
@@ -2083,23 +2113,30 @@ steps:
 
 ---
 
-## 2. 一鍵派生腳本 (`instantiate_ve.py`) 工序
+## 2. 一鍵派生與全資產自動登錄工具 (`manage_ledger.py scan` [v1.7.1])
 
-為實現無摩擦派生，提供標準化工具腳本 [virtual-enterprise-template/scripts/instantiate_ve.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/virtual-enterprise/virtual-enterprise-template/scripts/instantiate_ve.py)：
+為實現無摩擦派生與全資產零遺漏登錄，提供標準化維運與自動掃描工具 [manage_ledger.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/virtual-enterprise/virtual-enterprise-template/db/manage_ledger.py)：
 
 ```bash
-# 發動一鍵派生指令
+# 1. 發動一鍵派生指令
 /usr/bin/python3 scripts/instantiate_ve.py \
-  events-2026Q3/virtual-enterprise/virtual-enterprise-in-home-clinic \
+  events/mentors/xingyi/xingyi-ai-enablement/VE \
   --name "在宅醫療診所" \
   --code "CLINIC" \
   --init-git
+
+# 2. 全資產 100% 自動物理掃描與中控 DB 登錄 (v1.7.1)
+cd VE/db
+python3 manage_ledger.py scan
+
+# 3. 查詢目前處於影子測試 (40) 或已對齊 (50) 的資產
+python3 manage_ledger.py list --status 40
 ```
 
-### 派生腳本物理作業：
-1. 自動複製 `virtual-enterprise-template` 完整 L0-L4 骨架與 `_workflow/` 目錄（自動排除內層 `.git`）。
-2. 自動建置新實例專屬之 `db/control_plane.sqlite` 資料庫。
-3. 自動執行新目標目錄之獨立 `git init -b main`。
+### 物理掃描登錄工序：
+1. 自動讀取 7 大部門之 `functional_list.csv` (`FNC-xxx`) 與 `system_catalog.csv` (`SYS-xxx`)。
+2. 自動讀取 `workflow_list.csv` (`WF-xxx`)、`_SOP/*.md` (`SOP-xxx`) 與 `Agents/*.json` (`AGT-xxx`)。
+3. 執行 `INSERT OR IGNORE` 將全公司資產 100% 登錄至 `entity_state_ledger`，初始狀態為 `20` (虛擬確認)。
 
 ---
 
@@ -2122,7 +2159,7 @@ graph TD
 
 1. **資料雙送**：將去識別化之真實個案同步抄送給真實員工與 Agent 網路。
 2. **Gap Analysis**：比對兩者產出之差異與合規性。
-3. **85% 閥值解鎖**：當對齊度達到 85% 以上時，正式解鎖從「人機對合 (Human-in-the-loop)」切換至「例外管理 (Management by Exception)」的自動化營運。
+3. **85% 閥值解鎖**：當對齊度達到 85% 以上時，手動在 `manage_ledger.py` 將狀態升級為 `50` (已對齊) 乃至 `60` (已確認)，正式解鎖從「人機對合 (Human-in-the-loop)」切換至「例外管理 (Management by Exception)」的自動化營運。
 
 
 ---

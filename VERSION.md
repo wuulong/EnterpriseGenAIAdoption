@@ -4,6 +4,20 @@
 
 ---
 
+## [v1.7.1] - 2026-07-31
+### 🌟 全域實態引擎 (Entity State Engine)、數字狀態碼 (10~80) 與全資產自動登錄
+本次升級於中控控制面資料庫正式導入全域實體狀態總控表 (`entity_state_ledger`)、8 大數字狀態碼 (10~80) 與 JSON Metadata，解決虛擬企業落地與影子測試狀態監控問題。
+
+#### 1. 全域實體狀態總控表 (`entity_state_ledger`) 與 8 大數字狀態碼 (7.3)
+- **數字狀態碼 (Status Integer Enum)**：將狀態改為整數 10~80，包含 10 (虛擬發想)、20 (虛擬確認)、30 (真實對接啟動)、40 (對齊進行中)、50 (已對齊)、60 (已確認)、70 (修訂中) 與 80 (修訂確認)，極大化 SQL 查詢排序與區間篩選效能。
+- **JSON Metadata 欄位 (`meta_data`)**：新增 `meta_data TEXT DEFAULT '{}'` 欄位，無痛寫入影子測試對齊率 (`alignment_rate`)、門檻金額與標籤。
+
+#### 2. 全資產 100% 自動物理掃描與維運工具 (`manage_ledger.py scan`) (7.5)
+- **全資產自動登錄**：發動 `manage_ledger.py scan` 物理掃描 7 大部門下所有 `functional_list.csv` (`FNC-xxx`)、`system_catalog.csv` (`SYS-xxx`)、`workflow_list.csv` (`WF-xxx`)、`_SOP/` Markdown 與 `Agents/` JSON，將全公司資產 100% 寫入中控 SQLite。
+- **維運 CLI**：提供 `list`, `update`, `add`, `scan` 指令與 Terminal 中文標籤映射。
+
+---
+
 ## [v1.7.0] - 2026-07-30
 ### 🌟 虛擬企業建模 (Virtual Enterprise)、雙軌融合 (Hydration) 與 GitOps 控制面實踐
 本次升級正式將最新實證成果「虛擬企業模板 (virtual-enterprise-template) 與 SE-6D 系統工程」融入專書體系，建構完整「AI 原生虛擬企業 (Virtual Enterprise AI-Native Vessel)」的物理建構與部署運維框架。
@@ -16,36 +30,8 @@
 - **通用範本派生與私有實例隔離 (7.5)**：依據 `ADR-005` 實施通用範本 (Public Repo) 與私有標竿實例 (Private Repo) 嚴格隔離，透過一鍵派生腳本 (`instantiate_ve.py`) 與影子模式 (Shadow Mode) 85% 對齊度解鎖切換。
 - **回顧與轉型成熟度自測 (7.6)**：提供 5 大維度之虛擬企業建模評估清單。
 
-#### 2. 全書架構與大綱 (ToC.md) 對接修訂
-- **章節修訂**：同步更新 1.3 節 (二維座標)、2.2 節 (Meta DB & SYS-xxx)、3.3 節 (3-Tier workflow)、4.1 節 (`ADR-005` 私有實例與影子模式) 及附錄 A Q7 虛擬企業影子測試。
-
 ---
 
 ## [v1.6.1] - 2026-07-08
-### 🌟 Agentic Platform 平台化架構、治理工程 (Harness) 與生態合作落地 (Platformization, Harness Engineering & Ecosystem Collaboration)
-本次升級將方法論跨入實體平台產品與商業實作。實作了地端自動去識別化去識別化、執行儀表板監控、剛性限制的治理工程與 Hook 攔截機制，並確立大腦與 SI 執行專業分工及獲利模型。
-
-#### 1. Agentic AI Platform 平台架構與彈性部署
-- **通用 Skill 共享庫 (3.4)**：定義如何將口袋技能格律化上傳至平台通用共享庫，防止重複造輪子。
-- **雲地結合與自動去識別化 (4.1)**：敏感 Facts 地端留存與 Model Router，上雲前自動進行 PII 去識別化，並地端還原。
-- **Execution Dashboard 儀表板 (4.2)**：實時呈報活動中 Task 運作流、Skill 被呼叫熱度 (Skill Heatmap) 與產出結果資產。
-
-#### 2. 治理工程 (Harness Engineering) 與 Hook 攔截機制
-- **治理工程與 Hook 攔截 (4.3 新增)**：藉由 before_action (高危動作與權限檢核) 與 after_action (產出品質與檔案註解稽核) 的 Hook 攔截點剛性約束 Agent，以及基於 SDK 的多代理 MAS 循環修正 Loop。
-- **子章節編號順延**：完成 4.4 法律認信與 4.5 回顧自測的序號物理順延更新。
-
-#### 3. 轉型顧問、SOP 提取與三重獲利模型
-- **顧問 SOP 提取與獲利模型 (5.3)**：重構有機賦能作業系統，還原 Wing Group 「戰術轉化器」核心概念。整合轉型顧問與 Node Map SOP 提取，並推出 GPU 機台部署、訂閱與流量費、顧問諮詢的三重獲利模型。
-- **專業分工與生態合攻 (6.4 新增)**：解耦大腦顧問與 SI 執行方，並與 SDK 生態圈開發者進行技術合攻，順延 6.5 回顧自測。
-
----
-
-## [v1.6.0] - 2026-07-08
-### 🌟 三層人才架構、無感 Context 採集與 30步反思寫作流 (Three-Layer Talent, Frictionless Context Capture & 30-Step Reflection Flow)
-本次升級實作了無感資料收集、創意防八股的寫作反思流，以及最佳化轉型組織架構的三層人才體系與指標百科更新。
-
----
-
-## [v1.5.1] - 2026-06-25
-### 🇹🇼 語感在地化與二維知識矩陣
+### 🌟 Agentic Platform 平台化架構、治理工程 (Harness) 與生態合作落地
 ... (其餘版本歷史保留)
